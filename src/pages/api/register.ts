@@ -35,6 +35,8 @@ export default async function handler(
       },
     });
 
+    prismadb.movie.createMany;
+
     return res.status(200).json(user);
   } catch (err) {
     console.log(err);
