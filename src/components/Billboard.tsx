@@ -21,6 +21,7 @@ const Billboard = () => {
         loop
         className="w-full h-[56-25vw] object-cover brightness-[60%]"
       ></video>
+      asdasd
       <div className="absolute top-[30%] md:top[40%] ml-4 md:ml-16 ">
         <h2 className="text-white text-1xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold drop-shadow-xl">
           {billboard?.title}
