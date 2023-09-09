@@ -2,9 +2,9 @@ import useSWR from "swr";
 import fetcher from "@/lib/fetcher";
 import TypeMovie from "@/types/MovieType";
 
-export default function useFavorites() {
-  const { data, isLoading, error, mutate } = useSWR<TypeMovie[]>(
-    "/api/favorites",
+const useMovie = (id: string | undefined) => {
+  const { data, isLoading, error, mutate } = useSWR<TypeMovie>(
+    id ? `/api/movies/${id}` : null,
     fetcher,
     {
       revalidateIfStale: false,
@@ -19,4 +19,6 @@ export default function useFavorites() {
     error,
     mutate,
   };
-}
+};
+
+export default useMovie;
