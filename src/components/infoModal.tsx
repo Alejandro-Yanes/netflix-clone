@@ -29,7 +29,7 @@ const InfoModal: React.FunctionComponent<InfoModalProps> = ({
     setTimeout(() => {
       onClose();
     }, 300);
-  }, []);
+  }, [onClose]);
 
   if (!movie) return null;
 
